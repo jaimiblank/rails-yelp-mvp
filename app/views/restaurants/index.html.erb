@@ -1,0 +1,8 @@
+<div class="container">
+<h2>Welcome to the Restaurant Directory</h2>
+<ul>
+<% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant %></li>
+    <% end %>
+</ul>
+</div>
