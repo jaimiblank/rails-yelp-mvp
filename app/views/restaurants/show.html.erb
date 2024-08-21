@@ -1,1 +1,11 @@
-hello from the show
+<div class="container">
+<h1>Your selected Restaurant</h1>
+<%= @restaurant.name %>
+<%= @restaurant.address %>
+<div>
+<p>
+<%= link_to "See Reviews", restaurant_review_path(:id) %>
+</p>
+</div>
+<%= link_to "⬅️ Back to directory", restaurants_path %>
+</div>

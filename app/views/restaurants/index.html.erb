@@ -2,7 +2,13 @@
 <h2>Welcome to the Restaurant Directory</h2>
 <ul>
 <% @restaurants.each do |restaurant| %>
-    <li><%= link_to restaurant.name, restaurant %></li>
+    <li>
+    <%= restaurant.name %>
+    <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+    </li>
     <% end %>
 </ul>
+
+<%= link_to "➕ Add New Restaurant", new_restaurant_path %>
+<%# <%= link_to restaurant.name, restaurant %>
 </div>
